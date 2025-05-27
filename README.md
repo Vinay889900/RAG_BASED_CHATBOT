@@ -1,66 +1,68 @@
-RAG-Based Chatbot
-This is a Retrieval-Augmented Generation (RAG) based chatbot that combines the power of Large Language Models (LLMs) with a custom knowledge base to provide accurate and context-aware answers.
+# RAG-Based Chatbot 🤖📚
 
-Features
-Document-aware QA: Answers questions using relevant documents.
+A Retrieval-Augmented Generation (RAG) chatbot that combines the power of Large Language Models (LLMs) with vector-based document retrieval to deliver accurate, context-aware responses.
 
-LLM Integration: Uses OpenAI GPT models for natural, conversational responses.
+---
 
-Vector Store: Implements FAISS for fast similarity search.
+## 🚀 Features
 
-Prompt Engineering: Custom prompts for better context handling.
+- 📄 **Document-Aware Question Answering**
+- 🧠 **Powered by OpenAI LLMs (e.g., GPT-3.5 / GPT-4)**
+- 📚 **Custom Knowledge Base Support**
+- 🔍 **Vector Search with FAISS**
+- ⚙️ **LangChain-Powered RAG Pipeline**
+- 🖥️ **User Interface with Streamlit**
 
-LangChain: Manages the RAG pipeline using LangChain framework.
+---
 
-Tech Stack
-Python
+## 🛠️ Tech Stack
 
-LangChain
+- Python
+- [LangChain](https://www.langchain.com/)
+- [FAISS (Facebook AI Similarity Search)](https://github.com/facebookresearch/faiss)
+- [OpenAI API](https://platform.openai.com/)
+- Streamlit (for the frontend)
 
-FAISS
+---
 
-OpenAI API
+## 🧩 How It Works
 
-Streamlit (for UI)
+1. **Document Upload**: User uploads PDFs or text documents.
+2. **Text Splitting & Embedding**: The documents are chunked and converted into embeddings.
+3. **Vector Storage**: Embeddings are stored in a FAISS index.
+4. **Query**: User inputs a question.
+5. **Retrieval**: Relevant document chunks are retrieved from the FAISS index.
+6. **Generation**: Retrieved context and user query are passed to an LLM to generate the final response.
 
-How It Works
-Document Ingestion: Upload PDFs or text files to form the knowledge base.
+---
 
-Embedding: Text is split into chunks and converted into vector embeddings.
+## ⚙️ Installation
 
-Vector Search: When a query is asked, similar chunks are retrieved from FAISS.
-
-LLM Response: Retrieved data and the query are passed to an LLM to generate a response.
-
-Setup Instructions
-Clone the repository:
-
-bash
-Copy
-Edit
+```bash
+# Clone the repository
 git clone https://github.com/your-username/rag-chatbot.git
 cd rag-chatbot
-Install dependencies:
 
-bash
-Copy
-Edit
+# Install dependencies
 pip install -r requirements.txt
-Add your OpenAI API key in .env file:
 
-ini
+🔐 API Keys
+Create a .env file in the root directory and add:
+
+env
 Copy
 Edit
-OPENAI_API_KEY=your-api-key
-Run the chatbot:
-
+OPENAI_API_KEY=your_openai_api_key_here
+▶️ Running the App
 bash
 Copy
 Edit
 streamlit run app.py
-Example Use Cases
-Internal company document QA
+💡 Use Cases
+Internal company knowledge bots
 
-Personalized customer support
+AI-based academic assistants
 
-AI assistant for students and researchers
+Customer support automation
+
+Domain-specific chatbots
